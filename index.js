@@ -21,6 +21,7 @@ const timer = new Timer(durationInput, startButton, pauseButton, {
 
     onComplete(){
         console.log('Timer done')
-        circle.setAttribute('fill', 'transparent')
+        circle.setAttribute('fill', 'transparent');
+        durationInput.style.backgroundColor = "transparent";
     }
 });

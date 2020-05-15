@@ -17,6 +17,8 @@ class Timer {
     start = () => {
         if(this.onStart){
             this.onStart(this.timeRmaining);
+            durationInput.style.color = 'black';
+
         }
         this.tick();
         this.interval = setInterval(this.tick, 50);
@@ -39,6 +41,10 @@ class Timer {
             if(this.onTick){
                 this.onTick(this.timeRmaining);
             }
+        }
+
+        if(this.timeRmaining <= 5){
+            durationInput.style.color = '#FFFD75';
         }
       
     }
